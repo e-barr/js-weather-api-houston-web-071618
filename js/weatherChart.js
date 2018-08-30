@@ -1,19 +1,20 @@
 function getFahrenheit(result){
-  // debugger
-  // Your code goes here
+  const tempList = []
+  for (let i = 0; i < result.length; i++) {
+    let newTemp = result[i].temperature
+    tempList.push(newTemp)
+  }
+  return tempList
 }
 
 function getHour(result){
-  // const hourList = []
-  // for (let i = 0; i < result.length; i++) {
-  //   let newHour = new Date(result[i]["time"] * 1000).getHours()
-  //   hourList.push(newHour)
-  // }
-
-  // return hourList
-
   return result.map(hour => {
-    return new Date(hour.time * 1000).getHours()
+    let newHour = new Date(hour.time * 1000).getHours()
+    if (newHour + 1 === 24) {
+      return 0
+    } else {
+      return (newHour + 1)
+    }
   })
 }
 
@@ -50,4 +51,3 @@ function makeRequest(endpoint, canvas) {
 
   // After your fetch works - use your json data with the line below :)
 }
-
