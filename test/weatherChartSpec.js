@@ -26,14 +26,14 @@ describe('weatherChart', () => {
 
   describe("weatherChart", function(){
     // The array we want to get all of our info from is located in `dummyData.hourly_forecast`
-    it("returns a list of Fahrenheit temperatures", () => {
-      expect(getFahrenheit(dummyData)).toEqual([79.34,78.49,77.12,
-        75.1,73.15,71.66,70.72,70.25,69.88,69.27,68.51,68.06,68.13,
-        69.71,73.01,75.06,77.22,79.22,80.87,82.03,82.65,82.28,81.5,
-        80.22,78.84,77.52,76.15,74.67,73.06,71.76,70.76,70,69.32,
-        68.32,67.49,66.97,67.32,68.74,70.67,72.03,73.8,75.12,76.76,
-        78.14,78.74,77.78,76.43,74.64,73.57]);
-    });
+    // it("returns a list of Fahrenheit temperatures", () => {
+    //   expect(getFahrenheit(dummyData)).toEqual([79.34,78.49,77.12,
+    //     75.1,73.15,71.66,70.72,70.25,69.88,69.27,68.51,68.06,68.13,
+    //     69.71,73.01,75.06,77.22,79.22,80.87,82.03,82.65,82.28,81.5,
+    //     80.22,78.84,77.52,76.15,74.67,73.06,71.76,70.76,70,69.32,
+    //     68.32,67.49,66.97,67.32,68.74,70.67,72.03,73.8,75.12,76.76,
+    //     78.14,78.74,77.78,76.43,74.64,73.57]);
+    // });
 
     it("returns a list of hours", () => {
       expect(getHour(dummyData)).toEqual([18,19,20,21,22,23,0,1,2,3
